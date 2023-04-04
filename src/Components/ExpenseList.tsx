@@ -2,8 +2,8 @@ import React from "react";
 
 interface Expense {
   id: number;
-  description: string;
-  amount: number;
+  Description: string;
+  Amount: number;
   category: string;
 }
 
@@ -28,8 +28,8 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
       <tbody>
         {expenses.map((expense) => (
           <tr key={expense.id}>
-            <td>{expense.description}</td>
-            <td>{expense.amount}</td>
+            <td>{expense.Description}</td>
+            <td>{expense.Amount}</td>
             <td>{expense.category}</td>
             <td>
               <button
@@ -48,7 +48,7 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
           <td>
             ₹
             {expenses
-              .reduce((acc, expense) => expense.amount + acc, 0)
+              .reduce((acc, expense) => expense.Amount + acc, 0)
               .toFixed(2)}
           </td>
           <td></td>
